@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Neogerencialismo | Administración Pública</title>
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+        <span>NG</span>
+        <div>
+            <strong>NEOGERENCIALISMO</strong>
+            <small>Administración Pública</small>
+        </div>
+    </div>
+
+    <nav>
+        <button onclick="mostrarSeccion('inicio')">Inicio</button>
+        <button onclick="mostrarSeccion('equipo')">Nuestro equipo</button>
+        <button onclick="mostrarSeccion('ensayos')">Ensayos</button>
+        <button onclick="mostrarSeccion('caso')">Caso práctico</button>
+    </nav>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section id="inicio" class="hero seccion-activa">
+
+    <div class="hero-content">
+
+        <p class="etiqueta">
+            ADMINISTRACIÓN PÚBLICA · PROYECTO ACADÉMICO
+        </p>
+
+        <h1>
+            NEO<span>GERENCIALISMO</span>
+        </h1>
+
+        <div class="linea"></div>
+
+        <p class="pregunta">
+            ¿Puede la administración pública adoptar herramientas
+            de gestión moderna sin perder de vista al ciudadano?
+        </p>
+
+        <button class="boton-principal"
+                onclick="mostrarSeccion('equipo')">
+
+            Explorar proyecto
+            <span>→</span>
+
+        </button>
+
+    </div>
+
+    <div class="hero-decoration">
+        <span>01</span>
+        <div></div>
+        <span>GESTIÓN · INNOVACIÓN · CIUDADANÍA</span>
+    </div>
+
+</section>
+
+
+<!-- ================= EQUIPO ================= -->
+
+```html
+<!-- ================= NUESTRO EQUIPO ================= -->
+<section id="equipo" class="seccion">
+
+    <div class="titulo-seccion">
+        <span class="mini-titulo">CONÓCENOS</span>
+        <h2>Nuestro equipo</h2>
+        <p>
+            Conoce a los integrantes que forman parte de este proyecto
+            sobre Neogerencialismo y Administración Pública.
+        </p>
+    </div>
+
+    <div class="equipo-grid">
+
+        <!-- MATÍAS -->
+        <div class="tarjeta-integrante"
+             onclick="abrirPerfil('matias')">
+
+            <div class="foto-integrante">
+                <img src="img/matias.jpg" alt="Foto de Matías">
+            </div>
+
+            <div class="info-tarjeta">
+                <span class="numero-integrante">01</span>
+                <h3>Matías</h3>
+                <p>Estudiante de Administración Pública</p>
+                <button>CONOCER PERFIL →</button>
+            </div>
+
+        </div>
+
+
+        <!-- MARY -->
+        <div class="tarjeta-integrante"
+             onclick="abrirPerfil('mary')">
+
+            <div class="foto-integrante">
+                <img src="img/mary.jpg" alt="Foto de Mary">
+            </div>
+
+            <div class="info-tarjeta">
+                <span class="numero-integrante">02</span>
+                <h3>Mary</h3>
+                <p>Estudiante de Administración Pública</p>
+                <button>CONOCER PERFIL →</button>
+            </div>
+
+        </div>
+
+
+        <!-- DEYSI -->
+        <div class="tarjeta-integrante"
+             onclick="abrirPerfil('deysi')">
+
+            <div class="foto-integrante">
+                <img src="img/deysi.jpg" alt="Foto de Deysi">
+            </div>
+
+            <div class="info-tarjeta">
+                <span class="numero-integrante">03</span>
+                <h3>Deysi</h3>
+                <p>Estudiante de Administración Pública</p>
+                <button>CONOCER PERFIL →</button>
+            </div>
+
+        </div>
+
+
+        <!-- BELINDA -->
+        <div class="tarjeta-integrante"
+             onclick="abrirPerfil('belinda')">
+
+            <div class="foto-integrante">
+                <img src="img/belinda.jpg" alt="Foto de Belinda">
+            </div>
+
+            <div class="info-tarjeta">
+                <span class="numero-integrante">04</span>
+                <h3>Belinda</h3>
+                <p>Estudiante de Administración Pública</p>
+                <button>CONOCER PERFIL →</button>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= VENTANA DE PERFIL ================= -->
+
+<div id="modalPerfil" class="modal-perfil">
+
+    <div class="contenido-modal">
+
+        <button class="cerrar-modal"
+                onclick="cerrarPerfil()">
+            ×
+        </button>
+
+        <div class="modal-foto">
+            <img id="fotoPerfil" src="" alt="Foto del integrante">
+        </div>
+
+        <div class="modal-informacion">
+
+            <span id="numeroPerfil" class="numero-modal">
+                01
+            </span>
+
+            <h2 id="nombrePerfil">
+                Nombre
+            </h2>
+
+            <p id="carreraPerfil" class="carrera-modal">
+                Carrera
+            </p>
+
+            <div class="linea-modal"></div>
+
+            <div class="datos-perfil">
+
+                <div>
+                    <span>🎓 FORMACIÓN</span>
+                    <p id="formacionPerfil">
+                        Información académica
+                    </p>
+                </div>
+
+                <div>
+                    <span>🏫 INSTITUCIÓN</span>
+                    <p id="institucionPerfil">
+                        Información de institución
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="habilidades">
+
+                <div class="bloque-habilidad">
+                    <h4>Habilidades blandas</h4>
+                    <div id="softSkills" class="lista-habilidades"></div>
+                </div>
+
+                <div class="bloque-habilidad">
+                    <h4>Habilidades técnicas</h4>
+                    <div id="hardSkills" class="lista-habilidades"></div>
+                </div>
+
+            </div>
+
+            <div class="descripcion-integrante">
+                <h4>Sobre mí</h4>
+
+                <p id="descripcionPerfil">
+                    Aquí aparecerá la descripción del integrante.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================= ENSAYOS ================= -->
+
+<section id="ensayos" class="seccion seccion-oscura">
+
+    <div class="encabezado">
+
+        <p class="mini-titulo">02 · ENSAYOS</p>
+
+        <h2>
+            Cuatro perspectivas,
+            <span>un mismo tema</span>
+        </h2>
+
+        <p>
+            Selecciona a cada integrante para conocer
+            su ensayo sobre el neogerencialismo.
+        </p>
+
+    </div>
+
+
+    <div class="ensayos-container">
+
+        <div class="tabs">
+
+            <button class="tab activo" onclick="cambiarEnsayo(0)">
+               Tapia Matías
+            </button>
+
+            <button class="tab" onclick="cambiarEnsayo(1)">
+                Pinto Maria
+            </button>
+
+            <button class="tab" onclick="cambiarEnsayo(2)">
+                Nolasco Deysi
+            </button>
+
+            <button class="tab" onclick="cambiarEnsayo(3)">
+                Quilumba Belinda
+            </button>
+
+        </div>
+
+
+        <article class="ensayo">
+
+            <div class="ensayo-numero">
+                01
+            </div>
+
+            <div class="ensayo-contenido">
+
+                <p class="autor" id="autor">
+                    ENSAYO DE MATÍAS
+                </p>
+
+                <h3 id="tituloEnsayo">
+                    Título del ensayo
+                </h3>
+
+                <blockquote id="fraseEnsayo">
+                    "Agrega aquí una frase destacada
+                    relacionada con tu ensayo."
+                </blockquote>
+
+                <div class="texto-ensayo">
+
+                    <h4>Introducción</h4>
+
+                    <p id="introduccion">
+                        Escribe aquí la introducción del ensayo.
+                    </p>
+
+
+                    <h4>Desarrollo</h4>
+
+                    <p id="desarrollo">
+                        Escribe aquí el desarrollo del ensayo.
+                    </p>
+
+
+                    <h4>Conclusión</h4>
+
+                    <p id="conclusion">
+                        Escribe aquí la conclusión del ensayo.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CASO PRÁCTICO ================= -->
+
+<section id="caso" class="seccion">
+
+    <div class="encabezado">
+
+        <p class="mini-titulo">03 · CASO PRÁCTICO</p>
+
+        <h2>
+            LLALALA
+            <span>LALALA</span>
+        </h2>
+
+        <p>
+            Presentamos un caso práctico para comprender cómo las ideas
+            del neogerencialismo pueden llegar a aplicarse dentro
+            de las institución pública.
+        </p>
+
+    </div>
+
+
+    <!-- CASO -->
+
+    <div class="caso-grid">
+
+        <div class="caso-texto">
+
+            <span class="caso-etiqueta">
+                CASO 01 · INSTITUCIÓN PÚBLICA
+            </span>
+
+            <h3>
+                Una institución que necesita
+                modernizar su gestión
+            </h3>
+
+            <p>
+                Una institución pública presenta problemas
+                relacionados con procesos burocráticos,
+                largos tiempos de espera, exceso de trámites
+                y ciudadanos insatisfechos.
+            </p>
+
+            <p>
+                Frente a esta situación surge la necesidad
+                de implementar herramientas de gestión
+                orientadas a resultados.
+            </p>
+
+        </div>
+
+
+        <div class="caso-datos">
+
+            <div>
+                <span>PROBLEMA</span>
+                <strong>
+                    Exceso de trámites y baja eficiencia
+                </strong>
+            </div>
+
+            <div>
+                <span>ACTORES</span>
+                <strong>
+                    Ciudadanos · Funcionarios · Institución
+                </strong>
+            </div>
+
+            <div>
+                <span>OBJETIVO</span>
+                <strong>
+                    Mejorar eficiencia y calidad del servicio
+                </strong>
+            </div>
+
+            <div>
+                <span>PROPUESTA</span>
+                <strong>
+                    Gestión por resultados
+                </strong>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- APLICACIÓN -->
+
+    <div class="aplicacion">
+
+        <div>
+
+            <span class="numero-grande">
+                01
+            </span>
+
+            <h3>
+                ¿Cómo crees que aplicaríamos
+                el neogerencialismo?
+            </h3>
+
+        </div>
+
+
+        <div class="pasos">
+
+            <div class="paso">
+
+                <span>01</span>
+
+                <h4>Digitalización</h4>
+
+                <p>
+                    Implementar plataformas digitales
+                    para reducir trámites presenciales.
+                </p>
+
+            </div>
+
+
+            <div class="paso">
+
+                <span>02</span>
+
+                <h4>Indicadores</h4>
+
+                <p>
+                    Medir tiempos de atención,
+                    satisfacción y resultados.
+                </p>
+
+            </div>
+
+
+            <div class="paso">
+
+                <span>03</span>
+
+                <h4>Evaluación</h4>
+
+                <p>
+                    Evaluar periódicamente el desempeño
+                    de la institución.
+                </p>
+
+            </div>
+
+
+            <div class="paso">
+
+                <span>04</span>
+
+                <h4>Ciudadanía</h4>
+
+                <p>
+                    Colocar al ciudadano como centro
+                    de la gestión pública.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= JUEGO ================= -->
+
+    <div class="juego">
+
+        <div class="juego-intro">
+
+            <span>🎮 MINI JUEGO</span>
+
+            <h3>
+                Tú eres un servidor público
+            </h3>
+
+            <p>
+                Imagina que acabas de asumir la dirección
+                de una institución pública.
+            </p>
+
+            <p>
+                Los ciudadanos se quejan porque un trámite
+                tarda demasiado. ¿Qué harías?
+            </p>
+
+        </div>
+
+
+        <div class="opciones">
+
+            <button
+                onclick="mostrarResultado(this)"
+                data-result="Excelente decisión. Digitalizar el trámite puede reducir tiempos y mejorar la experiencia del ciudadano.">
+
+                Digitalizar el trámite
+
+            </button>
+
+
+            <button
+                onclick="mostrarResultado(this)"
+                data-result="Buena estrategia. Los indicadores permiten saber si realmente se están alcanzando resultados.">
+
+                Crear indicadores
+
+            </button>
+
+
+            <button
+                onclick="mostrarResultado(this)"
+                data-result="Es una opción arriesgada. Antes de cambiar todo el sistema es importante analizar qué procesos necesitan realmente ser modificados.">
+
+                Cambiar todo
+
+            </button>
+
+
+            <button
+                onclick="mostrarResultado(this)"
+                data-result="No es recomendable. Mantener los problemas existentes no mejora la eficiencia ni la calidad del servicio público.">
+
+                No hacer nada
+
+            </button>
+
+        </div>
+
+
+        <div id="resultado-juego" class="resultado-juego">
+
+            Selecciona una opción para tomar tu decisión...
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= MULTIMEDIA ================= -->
+
+    <div class="multimedia">
+
+        <div class="media-card video">
+
+            <div class="icono">
+                ▶
+            </div>
+
+            <h3>
+                Video
+            </h3>
+
+            <p>
+                Coloca aquí un video relacionado
+                con el neogerencialismo.
+            </p>
+
+            <span>
+                INSERTAR VIDEO
+            </span>
+
+        </div>
+
+
+        <div class="media-card">
+
+            <div class="icono">
+                💡
+            </div>
+
+            <h3>
+                ¿Sabías que...?
+            </h3>
+
+            <p>
+                El neogerencialismo busca incorporar
+                herramientas de gestión del sector privado
+                dentro de la administración pública.
+            </p>
+
+            <span>
+                DATO CURIOSO
+            </span>
+
+        </div>
+
+
+        <div class="media-card">
+
+            <div class="icono">
+                
+            </div>
+
+            <h3>
+                Galería
+            </h3>
+
+            <p>
+                Agrega imágenes relacionadas con
+                la investigación, exposición o proyecto.
+            </p>
+
+            <span>
+                AGREGAR IMÁGENES
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOTO GRUPAL -->
+
+    <div class="foto-grupal">
+
+        <div>
+
+            <span>
+                FOTO GRUPAL
+            </span>
+
+            <h3>
+                Nuestro equipo
+            </h3>
+
+            <p>
+                Matías · Mary · Deysi · Belinda
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-logo">
+        NG
+    </div>
+
+    <div>
+
+        <strong>
+            NEOGERENCIALISMO
+        </strong>
+
+        <p>
+            Administración Pública · Proyecto académico
+        </p>
+
+    </div>
+
+    <span class="copyright">
+        © 2026
+    </span>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
